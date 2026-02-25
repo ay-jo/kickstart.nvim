@@ -137,6 +137,10 @@ vim.o.updatetime = 250
 -- Decrease mapped sequence wait time
 vim.o.timeoutlen = 300
 
+-- Limit number of files stored in oldfiles because taking too long to load
+-- NOTE: ! at the beginning loads from memory instead of saving to file
+vim.opt.shada = "'20,<50,s10,h"
+
 -- Configure how new splits should be opened
 vim.o.splitright = true
 vim.o.splitbelow = true
